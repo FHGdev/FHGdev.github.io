@@ -1,15 +1,15 @@
 ---
 import Layout from '../../layouts/sg/Layout.astro';
 import Container from '../../components/Container.astro';
-import HomeHeroSection from '../../components/sections/heros/HomeHeroSection.astro';
+// import HomeHeroSection from '../../components/sections/heros/HomeHeroSection.astro';
 import { getCollection, getEntry } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import CustomModal from '../../components/Modal.astro';
+// import FormattedDate from '../../components/FormattedDate.astro';
+// import CustomModal from '../../components/Modal.astro';
 import ContactForm from '../../components/forms/ContactForm.astro';
 
 // import CustomModal from '../components/ModalButton.astro';
-import { Image } from "astro:assets"
-import { Debug } from 'astro:components';
+// import { Image } from "astro:assets"
+// import { Debug } from 'astro:components';
 
 	const posts_blog = (await getCollection('blog'))
 	.filter(post => post.data.status == 'active') // Filter out active posts
