@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/sg/Layout.astro';
+export async function getStaticPaths() {
+  return [
+    {params: {slug: 'locate-a-clinic'}},
+    {params: {slug: 'contact-us'}},
+    {params: {slug: 'mentally-healthier-in-sg'}},
+    {params: {slug: 'careers'}},
+    {params: {slug: 'the-mighty-storm-ebook'}},
+    {params: {slug: 'healthier-sg'}},
+    {params: {slug: 'executive-health-screening'}},
+    {params: {slug: 'ehs-interactive-quiz'}},
+    {params: {slug: 'primary-care'}},
+    {params: {slug: 'specialty-care'}},
+    {params: {slug: 'mastercard'}},
+    {params: {slug: 'primary-care-plan'}},
+    {params: {slug: 'onboard-centre'}},
+    {params: {slug: 'telemedicine'}},
+    {params: {slug: 'tele-art'}},
+    {params: {slug: 'concierge-app'}},
+    {params: {slug: 'livefuller'}},
+    {params: {slug: 'awards-accolades'}},
+    {params: {slug: 'who-we-are'}},
+    {params: {slug: 'network-management'}},
+    {params: {slug: 'management-team'}},
+    {params: {slug: 'book-an-appointment'}},
+    {params: {slug: 'privacy-policy'}},    
+  ];
+}
+
+const { slug } = Astro.params;
+let res = await fetch(`https://fhgsg.instawp.xyz/wp-json/wp/v2/pages?slug=${slug}`);
+let [post] = await res.json();
+---
+<Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
+  <div class="main" set:html={post.content.rendered} ></div>
+</Layout>

@@ -1,14 +1,78 @@
 ---
 import Container from '../../components/Container.astro';
-import Clock from '../../components/Clock.astro';
+import menuData from '../../data/menuGroupFooter.json';
+import { Image } from 'astro:assets';
+
+const { slug } = Astro.params;
+import award1 from './footerIMG/ey-entrepreneur-of-the-year-logo-vector-300x185.jpg';
+import award2 from './footerIMG/Healthcare-Asia-Awards-2021-logo-official-300x185.jpg';
+import award3 from './footerIMG/SBR-Technology-Excellence-Awards-2021-Logo-300x185.jpg';
+import award4 from './footerIMG/singhealth-duke-nus-academic-medical-centre-amc-logo-vector-300x185.jpg';
+import award5 from './footerIMG/voty2021_badge_gold_winner_compressed-300x185.png';
+import award6 from './footerIMG/voty2021_badge_silver_winner_compressed-300x185.png';
 ---
 <footer>
     <Container className="container-footer content__container">
-        <ul class="social-links" role="list">
-            <li class="facebook"><a href="https://www.facebook.com/fullertonhealth/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li class="twitter"><a href="https://twitter.com/fullertonhealth"><i class="fa fa-twitter"></i></a></li>
-            <li class="linkedin"><a href="https://sg.linkedin.com/company/fullerton-health"><i class="fa fa-linkedin"></i></a></li>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <Image src={award1} height="150" width="250" alt="Award 1" title="Award 1"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award2} height="150" width="250" alt="Award 2" title="Award 2"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award3} height="150" width="250" alt="Award 3" title="Award 3"/>              
+                    </div>
+                    <div class="slide">
+                        <Image src={award4} height="150" width="250" alt="Award 4" title="Award 4"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award5} height="150" width="250" alt="Award 5" title="Award 5"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award6} height="150" width="250" alt="Award 6" title="Award 6"/>                    
+                    </div>
+                    <div class="slide">
+                        <Image src={award1} height="150" width="250" alt="Award 1" title="Award 1"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award2} height="150" width="250" alt="Award 2" title="Award 2"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award3} height="150" width="250" alt="Award 3" title="Award 3"/>              
+                    </div>
+                    <div class="slide">
+                        <Image src={award4} height="150" width="250" alt="Award 4" title="Award 4"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award5} height="150" width="250" alt="Award 5" title="Award 5"/>                  
+                    </div>
+                    <div class="slide">
+                        <Image src={award6} height="150" width="250" alt="Award 6" title="Award 6"/>                    
+                    </div>
+                </div>
+            </div>        
+        </div>       
+
+        <ul class="link-card-grid">
+            {menuData.map(menu => (
+            <li class={`${menu.className}`} >
+                <a href={`${menu.url}`} class={`${menu.className}`}>{menu.name}</a>
+                {menu.submenu && (
+                <ul class="sub-menu">
+                    {menu.submenu.map(submenuItem => (
+                        <li>
+                            <a href={`${submenuItem.url}`}>{submenuItem.name}</a>                        
+                        </li>                    
+                    ))}
+                </ul>
+                )}
+            </li>
+            ))}
         </ul>
+
         <h5 class="text-center">Copyright © 2023</h5>
     </Container>    
 </footer>

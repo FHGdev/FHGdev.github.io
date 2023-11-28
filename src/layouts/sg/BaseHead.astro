@@ -1,9 +1,4 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import 'font-awesome/css/font-awesome.min.css';
-import { ViewTransitions } from 'astro:transitions';
-
 interface Props {
 	title: string;
 	description: string;
@@ -14,12 +9,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/favicon.ico' } = Astro.props;
 ---
 
-<ViewTransitions></ViewTransitions>
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/fhg/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href={image} />
 <meta name="generator" content={Astro.generator} />
 
 
@@ -46,11 +40,80 @@ const { title, description, image = '/favicon.ico' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 
+
 <script type="module" >
-	document.addEventListener('astro:page-load', () => {
-		// <!-- paste GA4 Tracking here -->
-		console.log('paste GA4 Tracking here ');
-		// <!-- paste GA4 Tracking here -->
-	}, ); 
+	//document.addEventListener('astro:page-load', () => {
+	   	const obeserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+		  	if(entry.isIntersecting) {
+				entry.target.classList.add('show');
+		  	} else {
+				entry.target.classList.remove('show');
+		  	}
+			});
+		});
+		const hiddenElements = document.querySelectorAll('.notshow');
+		hiddenElements.forEach((el) => obeserver.observe(el));
+
+	  	const menuButton = document.querySelector('#menuButton');
+		const body = document.querySelector('body');
+		const navHeader = document.querySelector('#navHeader');
+		const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
+		const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
+
+		if (menuButton) {
+			menuButton.addEventListener('click', toggleMenu);
+		}
+		
+		function toggleMenu() {
+			if (menuButtonIconHam) {
+				menuButtonIconHam.toggleAttribute('hidden');
+			}
+			if (menuButtonIconClose) {
+				menuButtonIconClose.toggleAttribute('hidden');
+			}
+			if (body) {
+				body.toggleAttribute('mobile-menu-open');
+			}
+			if (navHeader) {
+				navHeader.toggleAttribute('mobile-menu-open');
+			}
+		}
+	//}, );  
+</script>
+<!-- head -->
+
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script is:inline >
+	$(document).ready(function() {
+		size = $(document).width();
+		$('#navHeader nav ul li.has-submenu > a').on('click', function(e) {
+			e.preventDefault();
+			if(size <= 991){
+				$(this).next('ul').addClass('open-sub');
+			}
+		});
+		$('#navHeader nav ul li.has-submenu .back').on('click', function(e) {
+			e.preventDefault();
+			$(this).parent('ul').removeClass('open-sub');
+		});
+		windowSize();
+	});
+	$(window).resize(function(){
+        windowSize();
+    });
+	function windowSize() {        
+        var headerheight = $('#navHeader').height();
+        $('.main').css({'margin-top': headerheight + 'px' });
+  	};
 </script>
 
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-8GWLGV29V7"></script>
+<script is:inline >
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-8GWLGV29V7");
+</script>

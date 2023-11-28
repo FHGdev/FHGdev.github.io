@@ -1,0 +1,153 @@
+[
+  {
+    "name": "About Us",
+    "url": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Who we are",
+        "url": "/fhg/about-us",
+        "slug": "about-us",
+        "status" : "active"
+      },
+      {
+        "name": "What We Do",
+        "url": "/fhg/what-we-do",
+        "slug": "what-we-do",
+        "status" : "active"
+      },
+      {
+        "name": "Our Purpose and Shared values",
+        "url": "/fhg/our-purpose-and-shared-values",
+        "slug": "our-purpose-and-shared-values",
+        "status" : "active"
+      },
+      {
+        "name": "Management team",
+        "url": "/fhg/management-team",
+        "slug": "management-team",
+        "status" : "active"
+      },
+      {
+        "name": "BOARD OF DIRECTORS",
+        "url": "/fhg/board-of-directors",
+        "slug": "board-of-directors",
+        "status" : "active"
+      },
+      {
+        "name": "Our Milestone",
+        "url": "/fhg/our-milestones",
+        "slug": "our-milestones",
+        "status" : "active"
+      }    
+    ]
+  },
+  {
+    "name": "News",
+    "url": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "News & Events",
+        "url": "/fhg/category/fh-news-events",
+        "slug": "fh-news-events",
+        "status" : "active"
+      },
+      {
+        "name": "Press Releases",
+        "url": "/fhg/category/fh-press-releases",
+        "slug": "fh-press-releases",
+        "status" : "active"
+      },
+      {
+        "name": "Resources",
+        "url": "/fhg/category/fh-resources",
+        "slug": "fh-resources",
+        "status" : "active"
+      },
+      {
+        "name": "Improving Digitalisation",
+        "url": "/fhg/digital",
+        "slug": "digital",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "community",
+    "url": "/fhg/community",
+    "slug": "community",
+    "status" : "active"
+  },
+  {
+    "name": "sustainability",
+    "url": "/fhg/sustainability",
+    "slug": "sustainability",
+    "status" : "active"
+  },
+  {
+    "name": "contact us",
+    "url": "/fhg/contact-us",
+    "slug": "contact-us",
+    "status" : "active"
+  },
+  {
+      "name": "Country",
+      "url": "#",
+      "status" : "active",
+      "submenu": [
+        {
+          "name": "Singapore",
+          "url": "/fhg/sg/",
+          "slug": "sg",
+          "status" : "active"
+        },
+        {
+          "name": "Philippines",
+          "url": "/fhg/ph/",
+          "slug": "ph",
+          "status" : "active",
+          "submenu": [
+            {
+              "name": "Avega",
+              "url": "#",
+              "slug": "#",
+              "status" : "active"
+            },
+            {
+              "name": "Intellicare",
+              "url": "#",
+              "slug": "#",
+              "status" : "active"
+            },
+            {
+              "name": "Aventus",
+              "url": "#",
+              "slug": "#",
+              "status" : "active"
+            }
+          ]
+        },
+        {
+          "name": "Indonesia",
+          "url": "https://www.fullertonhealth.co.id/",
+          "slug": "id",
+          "status" : "active"
+        },
+        {
+          "name": "Malaysia",
+          "url": "#",
+          "slug": "my",
+          "status" : "active",
+          "submenu": [
+            {
+              "name": "IHPMY",
+              "url": "https://www.ihpmy.com/",
+              "slug": "ihpmy",
+              "status" : "active"
+            }
+          ]
+        }
+      ]
+  }
+]

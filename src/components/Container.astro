@@ -1,11 +1,11 @@
 ---
-const { narrow, className } = Astro.props;
+const {  className } = Astro.props;
 
 interface Props {
   className: string;
 }
 ---
 
-<div class={`content__container ${narrow ? 'content__container--narrow' : ''} ${className}`}>
+<div class={`content__container  ${className}`}>
   <slot></slot>
 </div>

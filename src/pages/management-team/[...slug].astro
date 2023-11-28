@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/group/Layout.astro';
+export async function getStaticPaths() {
+  return [
+    {params: {slug: 'ho-kuen-loon'}},
+    {params: {slug: 'kenneth-cheung'}},
+    {params: {slug: 'wendy-lim'}},
+    {params: {slug: 'margareta-laminto'}},
+    {params: {slug: 'ng-shen-li'}},
+    {params: {slug: 'dr-walter-lim'}},
+    {params: {slug: 'jeremy-matti'}},
+    {params: {slug: 'alain-durand'}},
+    {params: {slug: 'derrick-chan'}},
+    {params: {slug: 'sean-ho'}},
+    {params: {slug: 'laurene-kwek'}},
+    {params: {slug: 'alvin-lim'}},
+  ];
+}
+const { slug } = Astro.params;
+let res = await fetch(`https://fhggroup.instawp.xyz/wp-json/wp/v2/management-team?slug=${slug}`);
+let [post] = await res.json();
+---
+<Layout title={`${post.title.rendered} | Fullerton Health`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page management-team ${post.slug} team-inner` }>
+  <div class="main" set:html={post.content.rendered} ></div>
+</Layout>

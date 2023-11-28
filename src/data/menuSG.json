@@ -1,0 +1,248 @@
+[
+  {
+    "name": "About Us",
+    "url": "#",
+    "slug": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Who We Are",
+        "url": "/fhg/sg/who-we-are",
+        "slug": "who-we-are",
+        "status" : "active"
+      },
+      {
+        "name": "Awards & Accolades",
+        "url": "/fhg/sg/awards-accolades",
+        "slug": "awards-accolades",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "Services",
+    "url": "#",
+    "slug": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "GP",
+        "url": "/fhg/sg/primary-care",
+        "slug": "primary-care",
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Healthcare Screening",
+            "url": "/fhg/sg/executive-health-screening",
+            "slug": "executive-health-screening",
+            "status" : "active"
+          },
+          {
+            "name": "MASTERCARD PACKAGES",
+            "url": "/fhg/sg/mastercard",
+            "slug": "mastercard",
+            "status" : "active"
+          }
+        ]
+      },
+      {
+        "name": "Specialty Care",
+        "url": "/fhg/sg/specialty-care",
+        "slug": "specialty-care",
+        "status" : "active"
+      },
+      {
+        "name": "Migrant Worker Care",
+        "url": "#",
+        "slug": "#",
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Primary Care Plan",
+            "url": "/fhg/sg/primary-care-plan",
+            "slug": "primary-care-plan",
+            "status" : "active"
+          },
+          {
+            "name": "Onboard Centre",
+            "url": "/fhg/sg/onboard-centre",
+            "slug": "onboard-centre",
+            "status" : "active"
+          }
+        ]
+      },
+      {
+        "name": "Digital Services",
+        "url": "#",
+        "slug": "#",
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Digital Services – Telemedicine",
+            "url": "/fhg/sg/telemedicine",
+            "slug": "telemedicine",
+            "status" : "active"
+          },
+          {
+            "name": "Tele-ART",
+            "url": "/fhg/sg/tele-art",
+            "slug": "tele-art",
+            "status" : "active"
+          },
+          {
+            "name": "Concierge – Mobile App",
+            "url": "/fhg/sg/concierge-app",
+            "slug": "concierge-app",
+            "status" : "active"
+          },
+          {
+            "name": "LiveFuller – Mobile App",
+            "url": "/fhg/sg/livefuller",
+            "slug": "livefuller",
+            "status" : "active"
+          }
+        ]
+      },
+      {
+        "name": "Network Management",
+        "url": "/fhg/sg/network-management",
+        "slug": "network-management",
+        "status" : "active"
+      },
+      {
+        "name": "Subsidiaries",
+        "url": "#",
+        "slug": "#",
+        "status" : "active",
+        "submenu": [
+          {
+            "name": "Comfort Ambulance",
+            "url": "http://comfortambulance.com/",
+            "slug": "#",
+            "status" : "active"
+          },
+          {
+            "name": "RadLink",
+            "url": "https://radlink.com.sg/",
+            "slug": "#",
+            "status" : "active"
+          },
+          {
+            "name": "UrbanRehab",
+            "url": "https://urbanrehab.com.sg/",
+            "slug": "#",
+            "status" : "active"
+          },
+          {
+            "name": "Orchard Heart Specialist",
+            "url": "https://www.orchardheart.com/",
+            "slug": "#",
+            "status" : "active"
+          }
+        ]
+      },
+      {
+        "name": "Covid-19",
+        "url": "#",
+        "slug": "#",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "Healthcare Screening",
+    "url": "/fhg/sg/executive-health-screening",
+    "slug": "executive-health-screening",
+    "status" : "active"
+  },
+  {
+    "name": "Healthier SG",
+    "url": "/fhg/sg/healthier-sg",
+    "slug": "healthier-sg",
+    "status" : "active"
+  },
+  {
+    "name": "News",
+    "url": "#",
+    "slug": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "News & Event",
+        "url": "#",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Press Releases",
+        "url": "#",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Resources",
+        "url": "#",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "The Mighty Storm E-Book",
+        "url": "/fhg/sg/the-mighty-storm-ebook",
+        "slug": "the-mighty-storm-ebook",
+        "status" : "active"
+      },
+      {
+        "name": "Mentally Healthier in SG",
+        "url": "/fhg/sg/mentally-healthier-in-sg",
+        "slug": "mentally-healthier-in-sg",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "Career",
+    "url": "/fhg/sg/careers",
+    "slug": "careers",
+    "status" : "active"
+  },
+  {
+    "name": "Contact",
+    "url": "#",
+    "slug": "#",
+    "status" : "active",
+    "submenu": [
+      {
+        "name": "Contact Us",
+        "url": "/fhg/sg/contact-us",
+        "slug": "contact-us",
+        "status" : "active"
+      },
+      {
+        "name": "Locate a Clinic",
+        "url": "/fhg/sg/locate-a-clinic",
+        "slug": "locate-a-clinic",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+      "name": "Country",
+      "url": "#",
+      "slug": "#",
+      "status" : "active",
+      "submenu": [
+        {
+          "name": "Group",
+          "url": "/fhg/",
+          "slug": "#",
+          "status" : "active"
+        },
+        {
+          "name": "Singapore",
+          "url": "/fhg/sg/",
+          "slug": "#",
+          "status" : "active"
+        }
+      ]
+  }
+]

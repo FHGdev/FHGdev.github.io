@@ -1,0 +1,21 @@
+---
+import '../../styles/group/index.less';
+import BaseHead from './BaseHead.astro';
+import Logo from '../../components/logo/Logo.astro';
+
+const { title, meta_description, body_class } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" >
+	<head>
+		<BaseHead title={title} description={meta_description} image="/fhg/fhg-logo.png" />				
+	</head>
+
+	<body class={body_class}>		
+			<span slot="logo">
+				<Logo />
+			</span>
+			<slot />
+	</body>
+</html>

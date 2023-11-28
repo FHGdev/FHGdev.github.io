@@ -33,8 +33,20 @@ const project = defineCollection({
 	}),
 });
 
+const teamlist = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		heroImage: z.string().optional(),
+		imgalt: z.string().optional(),
+		domain: z.string().optional(),
+		teamname: z.string().optional(),
+	}),
+});
 
 export const collections = {
 	'blog': blog,
 	'project': project,
+	'teamlist': teamlist
   };

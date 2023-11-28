@@ -1,0 +1,105 @@
+[
+
+  {
+    "name": "USEFUL LINKS",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Contact Us",
+        "url": "/fhg/sg/contact-us/",
+        "slug": "contact-us",
+        "status" : "active"
+      },
+      {
+        "name": "Locate a Clinic",
+        "url": "/fhg/sg/locate-a-clinic/",
+        "slug": "locate-a-clinic",
+        "status" : "active"
+      },
+      {
+        "name": "Book an Appointment",
+        "url": "/fhg/sg/book-an-appointment/",
+        "slug": "book-an-appointment",
+        "status" : "active"
+      },
+      {
+        "name": "Privacy Policy",
+        "url": "/fhg/sg/privacy-policy/",
+        "slug": "privacy-policy",
+        "status" : "active"
+      },
+      {
+        "name": "Supplier Code of Conduct",
+        "url": "https://fhgsg.instawp.xyz/wp-content/uploads/Fullerton-Health-Supplier-CoC-v2-3-May-202337.pdf",
+        "slug": "#",
+        "status" : "active"
+      }  
+    ]
+  },
+  {
+    "name": "SUBSIDIARIES",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Comfort Ambulance",
+        "url": "http://comfortambulance.com/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "Radlink",
+        "url": "https://radlink.com.sg/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": "UrbanRehab",
+        "url": "https://urbanrehab.com.sg/",
+        "slug": "#",
+        "status" : "active"
+      },
+      {
+        "name": " Orchard Heart Specialist",
+        "url": "https://www.orchardheart.com/",
+        "slug": "#",
+        "status" : "active"
+      }
+    ]
+  },
+  {
+    "name": "SERVICES",
+    "url": "#",
+    "status" : "active",
+    "slug": "#",
+    "submenu": [
+      {
+        "name": "Primary Care",
+        "url": "/fhg/sg/primary-care/",
+        "slug": "primary-care",
+        "status" : "active"
+      },
+      {
+        "name": "Specialty Care",
+        "url": "/fhg/sg/specialty-care/",
+        "slug": "specialty-care",
+        "status" : "active"
+      },
+      {
+        "name": "Network Management",
+        "url": "/fhg/sg/network-management/",
+        "slug": "network-management",
+        "status" : "active"
+      },
+      {
+        "name": " Orchard Heart Specialist",
+        "url": "https://www.orchardheart.com/",
+        "slug": "#",
+        "status" : "active"
+      }
+    ]
+  }
+]

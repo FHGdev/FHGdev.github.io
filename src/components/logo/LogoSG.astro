@@ -2,12 +2,11 @@
 import { Image } from "astro:assets";
 import fhglogo from "../../../public/fhg-logo.png"
 ---
-
 <p class="logo">
 	<Image 
 	src={fhglogo} 
 	alt="Fullerton Health" 
-	width={220} 
+	width={240} 
 	height={60} 
 	loading="lazy"
 	decoding="async">
@@ -20,15 +19,18 @@ import fhglogo from "../../../public/fhg-logo.png"
 		font-family: var(--theme-font-family-serif);
     	font-size: var(--font-size-md);
 		color: inherit;
-		background-image: linear-gradient(90deg, #00000080, #00000080);
+		/* background-image: linear-gradient(90deg, #00000080, #00000080);
 		background-size: 0 3px;
 		background-position: left bottom;
 		transition: background-size 100ms ease-in;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat; */
 	}
 	.logo:hover {
 		/* text-decoration: underline; */
 		background-size: 100%  3px;
 		cursor: pointer;
+	}
+	.logo img {
+		object-fit: contain;
 	}
 </style>

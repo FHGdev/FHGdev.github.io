@@ -1,23 +1,23 @@
 ---
-import Layout from '../layouts/group/Layout.astro';
+import Layout404 from '../layouts/group/Layout404.astro';
+import Container from '../components/Container.astro';
 ---
-
-<Layout title="404 | t2del" meta_description="404 Not Found" body_class="404 not-found">	
+<Layout404 title="Fullerton Health - 404 Not Found" meta_description="Fullerton Health - 404 Not Found" body_class="not-found-404 404">
 	<section class="section-404">
-		<div class="hero-section__text">
+		<Container className="container-about">
 			<h1>404</h1>
 			<h2>Page Not Found 👀</h2>
-			<a href="/fhg/">Home</a>
-		</div>
-		
+			<a href="javascript: history.back()">Go back</a>
+		</Container>
 	</section>
-</Layout>
-
+</Layout404>
 <style>
 	.section-404 {
 		position: relative;
-    	height: 100vh;
-		background: #ccc;
+		height: 50vh;
+		display: flex;
+		align-items: center;
+		margin: 20% auto;
 	}
 	.hero-section__text {
 		justify-self: center;
@@ -74,5 +74,8 @@ import Layout from '../layouts/group/Layout.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	body.not-found-404 .header-action-item__container {
+		display: none;
 	}
 </style>

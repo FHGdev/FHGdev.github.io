@@ -1,49 +1,19 @@
 ---
 import Layout from '../../layouts/sg/Layout.astro';
-import Container from '../../components/Container.astro';
-// import HomeHeroSection from '../../components/sections/heros/HomeHeroSection.astro';
-import { getCollection, getEntry } from 'astro:content';
-// import FormattedDate from '../../components/FormattedDate.astro';
-// import CustomModal from '../../components/Modal.astro';
-import ContactForm from '../../components/forms/ContactForm.astro';
-
-// import CustomModal from '../components/ModalButton.astro';
-// import { Image } from "astro:assets"
-// import { Debug } from 'astro:components';
-
-	const posts_blog = (await getCollection('blog'))
-	.filter(post => post.data.status == 'active') // Filter out active posts
-  	.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).reverse()
-	.slice(0, 3); // Limit to the first 3 posts
-
-	const posts_project = (await getCollection('project'))
-	.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).reverse();
-
-	const posts_project_featured = (await getCollection('project'))
-	.filter(post => post.data.status == 'featured') // Filter out active posts
-	.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());	
-
+const { slug = 'home' } = Astro.params;
+let res = await fetch(`https://fhgsg.instawp.xyz/wp-json/wp/v2/pages?slug=${slug}`);
+let [post] = await res.json();
+// The getStaticPaths() is required for static Astro sites.
+// If using SSR, you will not need this function.
+export async function getStaticPaths() {
+  let data = await fetch("https://fhgsg.instawp.xyz/wp-json/wp/v2/pages")
+  let posts = await data.json();
+  return posts.map((post: { slug: any; }) => ({
+    params: { slug: post.slug },
+    props: { post: post },
+  }));
+}
 ---
-
-<Layout title="Fullerton Health Singapore" meta_description="Fullerton Health Singapore" body_class="home">
-
-	<section id="about">
-		<Container className="container-about">
-			<h2 class="notshow fromleft">About <span class="text-gradient">Fullerton Health Singapore</span></h2>				
-		</Container>
-	</section>
-
-	
-		
-	
-
-	<section id="contact-us">			
-		<Container className="container-contact-us">			
-			<div class="feedback-form">
-				<h2 class="notshow fromleft"> <span class="text-gradient">Contact Form</span></h2>
-				<ContactForm></ContactForm>
-			</div>		
-		</Container>
-							
-	</section>
+<Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
+    <div class="main" set:html={post.content.rendered} ></div>
 </Layout>
