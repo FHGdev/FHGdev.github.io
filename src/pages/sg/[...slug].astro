@@ -8,7 +8,7 @@ export async function getStaticPaths() {
     {params: {slug: 'careers'}},
     {params: {slug: 'the-mighty-storm-ebook'}},
     {params: {slug: 'healthier-sg'}},
-    {params: {slug: 'executive-health-screening'}},
+//    {params: {slug: 'executive-health-screening'}},
     {params: {slug: 'ehs-interactive-quiz'}},
     {params: {slug: 'primary-care'}},
     {params: {slug: 'specialty-care'}},
@@ -32,6 +32,6 @@ const { slug } = Astro.params;
 let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?slug=${slug}`);
 let [post] = await res.json();
 ---
-<Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
+<Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug} elementor-${post.id}` }>
   <div class="main" set:html={post.content.rendered} ></div>
 </Layout>
