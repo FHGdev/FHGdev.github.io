@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-let res = await fetch(`https://fhgsg.instawp.xyz/wp-json/wp/v2/pages?slug=${slug}`);
+let res = await fetch(`https://www.fullertonhealth.com/sg/wp-json/wp/v2/pages?slug=${slug}`);
 let [post] = await res.json();
 ---
 <Layout title={`${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
