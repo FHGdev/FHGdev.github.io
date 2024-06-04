@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://FHGdev.github.io/',
-    base: '/fhg/',
+    base: '/',
     // output: 'server',
     // adapter: nodejs(),
 });
