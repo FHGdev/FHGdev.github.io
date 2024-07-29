@@ -2,12 +2,12 @@
 import Layout from '../layouts/group/Layout.astro';
 
 const { slug = 'home' } = Astro.params;
-let res = await fetch(`https://fhggroup.instawp.xyz/wp-json/wp/v2/pages?slug=${slug}`);
+let res = await fetch(`https://fullertonhealth.com/wp-json/wp/v2/pages?slug=${slug}`);
 let [post] = await res.json();
 // The getStaticPaths() is required for static Astro sites.
 // If using SSR, you will not need this function.
 export async function getStaticPaths() {
-  let data = await fetch("https://fhggroup.instawp.xyz/wp-json/wp/v2/pages")
+  let data = await fetch("https://fullertonhealth.com/wp-json/wp/v2/pages")
   let posts = await data.json();
   return posts.map((post: { slug: any; }) => ({
     params: { slug: post.slug },
