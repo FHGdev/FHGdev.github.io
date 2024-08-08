@@ -20,7 +20,7 @@ import { Debug } from 'astro:components';
                     teamlist.map((post) => (
                         <li class="portfolio-list"  id={post.slug}>
                             <CustomModal 
-                                title={post.data.title} 
+                                title={post.data.seo_title} 
                                 slug={`/management-team/${post.slug}/`}                                
                                 siteURL={post.data.siteUrl} 
                                 classText="animate_underline" 

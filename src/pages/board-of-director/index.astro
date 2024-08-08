@@ -11,7 +11,7 @@ import { Debug } from 'astro:components';
 
 ---
 
-<Layout title="Fullerton Health | Management Team" meta_description="Discover the dynamic individuals steering our Fullerton Health Management Team - Meet our exceptional leaders shaping the future of healthcare" body_class="board-of-directors">
+<Layout title="Fullerton Health | Board Of Direcots" meta_description="Discover the dynamic individuals steering our Fullerton Health Board Of Direcots - Meet our exceptional leaders shaping the future of healthcare" body_class="board-of-directors">
     <section>			
         <Container className="custom-class">
             <h2 class="notshow fromleft"> <span class="text-gradient">Portfolio</span></h2>
@@ -20,8 +20,8 @@ import { Debug } from 'astro:components';
                     teamlist.map((post) => (
                         <li class="portfolio-list"  id={post.slug}>
                             <CustomModal 
-                                title={post.data.title} 
-                                slug={`/management-team/${post.slug}/`}                                
+                                title={post.data.seo_title} 
+                                slug={`/board-of-director/${post.slug}/`}                                
                                 siteURL={post.data.siteUrl} 
                                 classText="animate_underline" 
                                 imgsrc={post.data.heroImage}
