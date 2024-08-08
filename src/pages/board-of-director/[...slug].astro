@@ -1,9 +1,7 @@
 ---
-import Layout from '../../layouts/group/Layout.astro';
-import Container from '../../components/Container.astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
 
-import FormattedDate from '../../components/FormattedDate.astro';
+import Layout from '../../layouts/group/Layout.astro';
 import Container from '../../components/Container.astro';
 
 export async function getStaticPaths() {
@@ -16,7 +14,6 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'project'>;
 
 const post = Astro.props;
-
 ---
 
 <Layout title={`${post.data.seo_title} | Board Of Director | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use">
@@ -27,4 +24,3 @@ const post = Astro.props;
 		</Container>
 	</article>
 </Layout>
-

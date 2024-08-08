@@ -6,7 +6,7 @@ import CustomModal from '../../components/ModalLink.astro';
 import { Debug } from 'astro:components';
 
 	const teamlist = (await getCollection('teamlist_management'))
-	//.filter(post => post.data.status == 'active') // Filter out active posts
+	.filter(post => post.data.status == 'active') // Filter out active posts
 	.sort((a, b) => a.data.sort.valueOf() - b.data.sort.valueOf());
 
 ---

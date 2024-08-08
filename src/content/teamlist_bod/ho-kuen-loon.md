@@ -1,12 +1,13 @@
 ---
+sort: 1
 pubDate: 'Oct 15 2023'
 updatedDate: 'Oct 15 2023'
-heroImage: '/teamlist/ho-kuen-loon.png'
+heroImage: '/teamlist/ho-kuen-loon-bod.png'
 imgalt: 'Fifth post'
 seo_title: Ho Kuen Loon
 seo_description: Mr Ho Kuen Loon is the Group CEO and Executive Director on the Board for Fullerton Health Group. Prior to his Group CEO appointment, he was the Group COO from 2019 to 2020 and MD, Singapore, from 2018 to 2022.
 image: {
-  src: "/teamlist/ho-kuen-loon.png",
+  src: "/teamlist/ho-kuen-loon-bod.png",
   alt: "Ho Kuen Loon",
 }
 status: 'active'

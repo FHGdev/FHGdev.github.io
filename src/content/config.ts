@@ -27,6 +27,7 @@ const teamlist_management = defineCollection({
 		teamname: z.string().optional(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		status: z.string().optional(),
 	}),
 });
 const teamlist_bod = defineCollection({
@@ -41,6 +42,7 @@ const teamlist_bod = defineCollection({
 		teamname: z.string().optional(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		status: z.string().optional(),
 	}),
 });
 
