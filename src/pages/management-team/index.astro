@@ -3,7 +3,6 @@ import Layout from '../../layouts/group/Layout.astro';
 import Container from '../../components/Container.astro';
 import { getCollection } from 'astro:content';
 import CustomModal from '../../components/ModalLink.astro';
-import { Debug } from 'astro:components';
 
 	const teamlist = (await getCollection('teamlist_management'))
 	.filter(post => post.data.status == 'active') // Filter out active posts
