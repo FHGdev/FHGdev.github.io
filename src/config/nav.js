@@ -1,7 +1,7 @@
 export const navGroup = [
 	{
 	  title: 'Home',
-	  slug: '/fhg/',
+	  slug: '/',
 	},
 	// {
 	//   title: 'About',
@@ -9,15 +9,15 @@ export const navGroup = [
 	// },
 	{
 	    title: 'Blog',
-	    slug: '/fhg/blog',
+	    slug: '/blog',
 	    submenu: [
             {
                 title: 'First post',
-                slug: '/fhg/blog/first-post',
+                slug: '/blog/first-post',
             },
             {
                 title: 'Second post',
-                slug: '/fhg/blog/second-post',
+                slug: '/blog/second-post',
             },
         ]
 	// 	{
@@ -32,7 +32,7 @@ export const navGroup = [
 	// },
 	{
 		title: 'Contact',
-		slug: '/fhg/contact-us',
+		slug: '/contact-us',
 	  },
   ];
 

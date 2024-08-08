@@ -7,7 +7,7 @@
     "submenu": [
       {
         "name": "Online Enquiry",
-        "url": "/fhg/contact-us",
+        "url": "/contact-us",
         "slug": "contact-us",
         "className" : ""
       }
@@ -21,31 +21,31 @@
     "submenu": [
       {
         "name": "Our Purpose and Shared values",
-        "url": "/fhg/our-purpose-and-shared-values",
+        "url": "/our-purpose-and-shared-values",
         "slug": "our-purpose-and-shared-values",
         "className" : ""
       },
       {
         "name": "BOARD OF DIRECTORS",
-        "url": "/fhg/board-of-directors",
+        "url": "/board-of-directors",
         "slug": "board-of-directors",
         "className" : ""
       },
       {
         "name": "Management team",
-        "url": "/fhg/management-team",
+        "url": "/management-team",
         "slug": "management-team",
         "className" : ""
       },
       {
         "name": "Milestone",
-        "url": "/fhg/our-milestone",
+        "url": "/our-milestone",
         "slug": "our-milestone",
         "className" : ""
       },
       {
         "name": "Privacy Policy",
-        "url": "/fhg/privacy-policy",
+        "url": "/privacy-policy",
         "slug": "privacy-policy",
         "className" : ""
       }  

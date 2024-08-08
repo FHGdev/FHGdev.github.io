@@ -9,8 +9,6 @@ declare module 'astro:content' {
 }
 
 declare module 'astro:content' {
-	export { z } from 'astro/zod';
-
 	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
 
 	export type CollectionKey = keyof AnyEntryMap;
@@ -18,53 +16,6 @@ declare module 'astro:content' {
 
 	export type ContentCollectionKey = keyof ContentEntryMap;
 	export type DataCollectionKey = keyof DataEntryMap;
-
-	// This needs to be in sync with ImageMetadata
-	export type ImageFunction = () => import('astro/zod').ZodObject<{
-		src: import('astro/zod').ZodString;
-		width: import('astro/zod').ZodNumber;
-		height: import('astro/zod').ZodNumber;
-		format: import('astro/zod').ZodUnion<
-			[
-				import('astro/zod').ZodLiteral<'png'>,
-				import('astro/zod').ZodLiteral<'jpg'>,
-				import('astro/zod').ZodLiteral<'jpeg'>,
-				import('astro/zod').ZodLiteral<'tiff'>,
-				import('astro/zod').ZodLiteral<'webp'>,
-				import('astro/zod').ZodLiteral<'gif'>,
-				import('astro/zod').ZodLiteral<'svg'>,
-				import('astro/zod').ZodLiteral<'avif'>,
-			]
-		>;
-	}>;
-
-	type BaseSchemaWithoutEffects =
-		| import('astro/zod').AnyZodObject
-		| import('astro/zod').ZodUnion<[BaseSchemaWithoutEffects, ...BaseSchemaWithoutEffects[]]>
-		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodIntersection<BaseSchemaWithoutEffects, BaseSchemaWithoutEffects>;
-
-	type BaseSchema =
-		| BaseSchemaWithoutEffects
-		| import('astro/zod').ZodEffects<BaseSchemaWithoutEffects>;
-
-	export type SchemaContext = { image: ImageFunction };
-
-	type DataCollectionConfig<S extends BaseSchema> = {
-		type: 'data';
-		schema?: S | ((context: SchemaContext) => S);
-	};
-
-	type ContentCollectionConfig<S extends BaseSchema> = {
-		type?: 'content';
-		schema?: S | ((context: SchemaContext) => S);
-	};
-
-	type CollectionConfig<S> = ContentCollectionConfig<S> | DataCollectionConfig<S>;
-
-	export function defineCollection<S extends BaseSchema>(
-		input: CollectionConfig<S>
-	): CollectionConfig<S>;
 
 	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
 	type ValidContentEntrySlug<C extends keyof ContentEntryMap> = AllValuesOf<
@@ -155,11 +106,11 @@ declare module 'astro:content' {
 			? {
 					collection: C;
 					slug: ValidContentEntrySlug<C>;
-			  }
+				}
 			: {
 					collection: C;
 					id: keyof DataEntryMap[C];
-			  }
+				}
 	>;
 	// Allow generic `string` to avoid excessive type errors in the config
 	// if `dev` is not running to update as you edit.
@@ -178,132 +129,6 @@ declare module 'astro:content' {
 "markdown-style-guide.md": {
 	id: "markdown-style-guide.md";
   slug: "markdown-style-guide";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 10.md": {
-	id: "post-1 copy 10.md";
-  slug: "post-1-copy-10";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 11.md": {
-	id: "post-1 copy 11.md";
-  slug: "post-1-copy-11";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 12.md": {
-	id: "post-1 copy 12.md";
-  slug: "post-1-copy-12";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 13.md": {
-	id: "post-1 copy 13.md";
-  slug: "post-1-copy-13";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 14.md": {
-	id: "post-1 copy 14.md";
-  slug: "post-1-copy-14";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 15.md": {
-	id: "post-1 copy 15.md";
-  slug: "post-1-copy-15";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 16.md": {
-	id: "post-1 copy 16.md";
-  slug: "post-1-copy-16";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 17.md": {
-	id: "post-1 copy 17.md";
-  slug: "post-1-copy-17";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 18.md": {
-	id: "post-1 copy 18.md";
-  slug: "post-1-copy-18";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 2.md": {
-	id: "post-1 copy 2.md";
-  slug: "post-1-copy-2";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 3.md": {
-	id: "post-1 copy 3.md";
-  slug: "post-1-copy-3";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 4.md": {
-	id: "post-1 copy 4.md";
-  slug: "post-1-copy-4";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 5.md": {
-	id: "post-1 copy 5.md";
-  slug: "post-1-copy-5";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 6.md": {
-	id: "post-1 copy 6.md";
-  slug: "post-1-copy-6";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 7.md": {
-	id: "post-1 copy 7.md";
-  slug: "post-1-copy-7";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 8.md": {
-	id: "post-1 copy 8.md";
-  slug: "post-1-copy-8";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy 9.md": {
-	id: "post-1 copy 9.md";
-  slug: "post-1-copy-9";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-1 copy.md": {
-	id: "post-1 copy.md";
-  slug: "post-1-copy";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -472,6 +297,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
 };
+"teamlist": {
+"markdown-style-guide.md": {
+	id: "markdown-style-guide.md";
+  slug: "markdown-style-guide";
+  body: string;
+  collection: "teamlist";
+  data: InferEntrySchema<"teamlist">
+} & { render(): Render[".md"] };
+"post-1.md": {
+	id: "post-1.md";
+  slug: "post-1";
+  body: string;
+  collection: "teamlist";
+  data: InferEntrySchema<"teamlist">
+} & { render(): Render[".md"] };
+};
 
 	};
 
@@ -481,5 +322,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	export type ContentConfig = typeof import("./../src/content/config.js");
 }

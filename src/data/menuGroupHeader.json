@@ -6,37 +6,37 @@
     "submenu": [
       {
         "name": "Who we are",
-        "url": "/fhg/about-us",
+        "url": "/about-us",
         "slug": "about-us",
         "status" : "active"
       },
       {
         "name": "What We Do",
-        "url": "/fhg/what-we-do",
+        "url": "/what-we-do",
         "slug": "what-we-do",
         "status" : "active"
       },
       {
         "name": "Our Purpose and Shared values",
-        "url": "/fhg/our-purpose-and-shared-values",
+        "url": "/our-purpose-and-shared-values",
         "slug": "our-purpose-and-shared-values",
         "status" : "active"
       },
       {
         "name": "Management team",
-        "url": "/fhg/management-team",
+        "url": "/management-team",
         "slug": "management-team",
         "status" : "active"
       },
       {
         "name": "BOARD OF DIRECTORS",
-        "url": "/fhg/board-of-directors",
+        "url": "/board-of-directors",
         "slug": "board-of-directors",
         "status" : "active"
       },
       {
         "name": "Our Milestone",
-        "url": "/fhg/our-milestones",
+        "url": "/our-milestones",
         "slug": "our-milestones",
         "status" : "active"
       }    
@@ -49,25 +49,25 @@
     "submenu": [
       {
         "name": "News & Events",
-        "url": "/fhg/category/fh-news-events",
+        "url": "/category/fh-news-events",
         "slug": "fh-news-events",
         "status" : "active"
       },
       {
         "name": "Press Releases",
-        "url": "/fhg/category/fh-press-releases",
+        "url": "/category/fh-press-releases",
         "slug": "fh-press-releases",
         "status" : "active"
       },
       {
         "name": "Resources",
-        "url": "/fhg/category/fh-resources",
+        "url": "/category/fh-resources",
         "slug": "fh-resources",
         "status" : "active"
       },
       {
         "name": "Improving Digitalisation",
-        "url": "/fhg/digital",
+        "url": "/digital",
         "slug": "digital",
         "status" : "active"
       }
@@ -75,19 +75,19 @@
   },
   {
     "name": "community",
-    "url": "/fhg/community",
+    "url": "/community",
     "slug": "community",
     "status" : "active"
   },
   {
     "name": "sustainability",
-    "url": "/fhg/sustainability",
+    "url": "/sustainability",
     "slug": "sustainability",
     "status" : "active"
   },
   {
     "name": "contact us",
-    "url": "/fhg/contact-us",
+    "url": "/contact-us",
     "slug": "contact-us",
     "status" : "active"
   },
@@ -98,13 +98,13 @@
       "submenu": [
         {
           "name": "Singapore",
-          "url": "/fhg/sg/",
+          "url": "/sg/",
           "slug": "sg",
           "status" : "active"
         },
         {
           "name": "Philippines",
-          "url": "/fhg/ph/",
+          "url": "/ph/",
           "slug": "ph",
           "status" : "active",
           "submenu": [
