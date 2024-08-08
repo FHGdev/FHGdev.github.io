@@ -11,10 +11,10 @@ import { Debug } from 'astro:components';
 
 ---
 
-<Layout title="Fullerton Health | Board Of Direcots" meta_description="Discover the dynamic individuals steering our Fullerton Health Board Of Direcots - Meet our exceptional leaders shaping the future of healthcare" body_class="board-of-directors">
+<Layout title="Fullerton Health | Board Of Directors" meta_description="Discover the dynamic individuals steering our Fullerton Health Board Of Directors - Meet our exceptional leaders shaping the future of healthcare" body_class="board-of-directors">
     <section>			
         <Container className="custom-class">
-            <h2 class="notshow fromleft"> <span class="text-gradient">Portfolio</span></h2>
+            <h1 class="notshow fromleft"> <span class="text-gradient">Board Of Directors</span></h1>
             <ul role="list" class="link-card-grid featured">
                 {
                     teamlist.map((post) => (
@@ -22,11 +22,7 @@ import { Debug } from 'astro:components';
                             <CustomModal 
                                 title={post.data.seo_title} 
                                 slug={`/board-of-director/${post.slug}/`}                                
-                                siteURL={post.data.siteUrl} 
-                                classText="animate_underline" 
-                                imgsrc={post.data.heroImage}
-                                role={post.data.role}
-                                platform={post.data.platform}
+                                classText="" 
                             />
                         </li>
                     ))
