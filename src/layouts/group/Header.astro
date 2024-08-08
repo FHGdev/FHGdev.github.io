@@ -50,9 +50,9 @@ const { slug } = Astro.params;
 		size = $(document).width();
 		$('#navHeader nav ul li.has-submenu > a').on('click', function(e) {
 			e.preventDefault();
-			if(size <= 991){
+			//if(size <= 991){
 				$(this).next('ul').addClass('open-sub');
-			}
+			//}
 		});
 		$('#navHeader nav ul li.has-submenu .back').on('click', function(e) {
 			e.preventDefault();
