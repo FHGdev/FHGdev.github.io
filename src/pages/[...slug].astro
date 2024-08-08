@@ -17,7 +17,6 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 let res = await fetch(`https://www.fullertonhealth.com/wp-json/wp/v2/pages?slug=${slug}`);
 let [post] = await res.json();
-console.log(post);
 ---
 <Layout title={`Fullerton Health | ${post.title.rendered}`} meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug} elementor-${post.id}` }>
   <div class="main" set:html={post.content.rendered} ></div>
