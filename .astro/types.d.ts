@@ -125,15 +125,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"blog": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "blog";
-  data: any;
-  render(): Render[".md"];
-}>;
-"post": {
+		"post": {
 "markdown-style-guide.md": {
 	id: "markdown-style-guide.md";
   slug: "markdown-style-guide";
@@ -149,22 +141,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 };
-"project": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "project";
-  data: any;
-  render(): Render[".md"];
-}>;
-"teamlist": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "teamlist";
-  data: any;
-  render(): Render[".md"];
-}>;
 "teamlist_bod": {
 "ho-kuen-loon.md": {
 	id: "ho-kuen-loon.md";
@@ -174,14 +150,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"teamlist_bod">
 } & { render(): Render[".md"] };
 };
-"teamlist_management copy": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "teamlist_management copy";
-  data: any;
-  render(): Render[".md"];
-}>;
 "teamlist_management": {
 "alain-durand.md": {
 	id: "alain-durand.md";
