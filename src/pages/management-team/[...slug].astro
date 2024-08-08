@@ -11,9 +11,10 @@ export async function getStaticPaths() {
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'project'>;
+type Props = CollectionEntry<'teamlist_management'>;
 
 const post = Astro.props;
+console.log(post)
 ---
 
 <Layout title={`${post.data.seo_title} | Management Team | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use">
