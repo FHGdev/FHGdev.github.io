@@ -125,192 +125,84 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"blog": {
+		"blog": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "blog";
+  data: any;
+  render(): Render[".md"];
+}>;
+"post": {
 "markdown-style-guide.md": {
 	id: "markdown-style-guide.md";
   slug: "markdown-style-guide";
   body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
+  collection: "post";
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 "post-1.md": {
 	id: "post-1.md";
   slug: "post-1";
   body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
+  collection: "post";
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 };
-"project": {
-"Agogo.md": {
-	id: "Agogo.md";
-  slug: "agogo";
+"project": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Clovers SG.md": {
-	id: "Clovers SG.md";
-  slug: "clovers-sg";
+  data: any;
+  render(): Render[".md"];
+}>;
+"teamlist": Record<string, {
+  id: string;
+  slug: string;
   body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"DomesticOne.md": {
-	id: "DomesticOne.md";
-  slug: "domesticone";
+  collection: "teamlist";
+  data: any;
+  render(): Render[".md"];
+}>;
+"teamlist_bod": {
+"ho-kuen-loon.md": {
+	id: "ho-kuen-loon.md";
+  slug: "ho-kuen-loon";
   body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Griddle Grinder.md": {
-	id: "Griddle Grinder.md";
-  slug: "griddle-grinder";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"MF Media.md": {
-	id: "MF Media.md";
-  slug: "mf-media";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Novel Communications.md": {
-	id: "Novel Communications.md";
-  slug: "novel-communications";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Patmos Bible.md": {
-	id: "Patmos Bible.md";
-  slug: "patmos-bible";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Shang Antique.md": {
-	id: "Shang Antique.md";
-  slug: "shang-antique";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Sis Premium Meats.md": {
-	id: "Sis Premium Meats.md";
-  slug: "sis-premium-meats";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Sona.md": {
-	id: "Sona.md";
-  slug: "sona";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Stellar Technology.md": {
-	id: "Stellar Technology.md";
-  slug: "stellar-technology";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"Unitronics Component.md": {
-	id: "Unitronics Component.md";
-  slug: "unitronics-component";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"asia-marketplace.md": {
-	id: "asia-marketplace.md";
-  slug: "asia-marketplace";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"begen.md": {
-	id: "begen.md";
-  slug: "begen";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"dmontessori.md": {
-	id: "dmontessori.md";
-  slug: "dmontessori";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"fullertonhealthgroup.md": {
-	id: "fullertonhealthgroup.md";
-  slug: "fullertonhealthgroup";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"fullertonhealthsingapore.md": {
-	id: "fullertonhealthsingapore.md";
-  slug: "fullertonhealthsingapore";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"jinders.md": {
-	id: "jinders.md";
-  slug: "jinders";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"marvid-international.md": {
-	id: "marvid-international.md";
-  slug: "marvid-international";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"new-peng-hiang.md": {
-	id: "new-peng-hiang.md";
-  slug: "new-peng-hiang";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"spring-brainy-kidz.md": {
-	id: "spring-brainy-kidz.md";
-  slug: "spring-brainy-kidz";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"unique-fine-pearls.md": {
-	id: "unique-fine-pearls.md";
-  slug: "unique-fine-pearls";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
 } & { render(): Render[".md"] };
 };
-"teamlist": {
-"markdown-style-guide.md": {
-	id: "markdown-style-guide.md";
-  slug: "markdown-style-guide";
+"teamlist_management copy": Record<string, {
+  id: string;
+  slug: string;
   body: string;
-  collection: "teamlist";
-  data: InferEntrySchema<"teamlist">
+  collection: "teamlist_management copy";
+  data: any;
+  render(): Render[".md"];
+}>;
+"teamlist_management": {
+"ho-kuen-loon.md": {
+	id: "ho-kuen-loon.md";
+  slug: "ho-kuen-loon";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
 } & { render(): Render[".md"] };
-"post-1.md": {
-	id: "post-1.md";
-  slug: "post-1";
+"kenneth-cheung.md": {
+	id: "kenneth-cheung.md";
+  slug: "kenneth-cheung";
   body: string;
-  collection: "teamlist";
-  data: InferEntrySchema<"teamlist">
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"wendy-lim.md": {
+	id: "wendy-lim.md";
+  slug: "wendy-lim";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
 } & { render(): Render[".md"] };
 };
 

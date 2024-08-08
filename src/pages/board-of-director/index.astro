@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/group/Layout.astro';
+import Container from '../../components/Container.astro';
+import { getCollection } from 'astro:content';
+import CustomModal from '../../components/ModalLink.astro';
+import { Debug } from 'astro:components';
+
+	const teamlist = (await getCollection('teamlist_bod'))
+	//.filter(post => post.data.status == 'active') // Filter out active posts
+	.sort((a, b) => a.data.sort.valueOf() - b.data.sort.valueOf());
+
+---
+
+<Layout title="Fullerton Health | Management Team" meta_description="Discover the dynamic individuals steering our Fullerton Health Management Team - Meet our exceptional leaders shaping the future of healthcare" body_class="board-of-directors">
+    <section>			
+        <Container className="custom-class">
+            <h2 class="notshow fromleft"> <span class="text-gradient">Portfolio</span></h2>
+            <ul role="list" class="link-card-grid featured">
+                {
+                    teamlist.map((post) => (
+                        <li class="portfolio-list"  id={post.slug}>
+                            <CustomModal 
+                                title={post.data.title} 
+                                slug={`/management-team/${post.slug}/`}                                
+                                siteURL={post.data.siteUrl} 
+                                classText="animate_underline" 
+                                imgsrc={post.data.heroImage}
+                                role={post.data.role}
+                                platform={post.data.platform}
+                            />
+                        </li>
+                    ))
+                }
+            </ul>
+        </Container>	
+    </section>	
+    
+  </Layout>

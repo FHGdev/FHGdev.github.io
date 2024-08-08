@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 
-const blog = defineCollection({
+const post = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -15,38 +15,37 @@ const blog = defineCollection({
 		author: z.string().optional(),
 	}),
 });
-
-const project = defineCollection({
+const teamlist_management = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
-		title: z.string().optional(),
-		desc: z.string().optional(),
-		heroImage: z.string().optional(),
-		heroThumb: z.string().optional(),
-		siteUrl: z.string().optional(),
-		role: z.string().optional(),
-		platform: z.string().optional(),
-		// Transform string to Date object
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
-		status: z.string().optional(),
-	}),
-});
-
-const teamlist = defineCollection({
-	// Type-check frontmatter using a schema
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
+		sort: z.number(),
+		seo_title: z.string(),
+		seo_description: z.string(),
 		heroImage: z.string().optional(),
 		imgalt: z.string().optional(),
-		domain: z.string().optional(),
+		position: z.string().optional(),
 		teamname: z.string().optional(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+	}),
+});
+const teamlist_bod = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		sort: z.number(),
+		seo_title: z.string(),
+		seo_description: z.string(),
+		heroImage: z.string().optional(),
+		imgalt: z.string().optional(),
+		position: z.string().optional(),
+		teamname: z.string().optional(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
 	}),
 });
 
 export const collections = {
-	'blog': blog,
-	'project': project,
-	'teamlist': teamlist
+	'post': post,
+	'teamlist_management': teamlist_management,
+	'teamlist_bod': teamlist_bod
   };

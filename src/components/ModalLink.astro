@@ -1,0 +1,18 @@
+---
+const { 
+  title = 'Welcome, world!', 
+  slug, 
+  classContainer = '', 
+  classText = '', 
+  imgsrc = '',
+  imgsrcScroll = '',
+  role = '',
+  platform = '',
+  siteURL = '#',
+} = Astro.props;
+---
+
+  <a class={`btn-modal ${classContainer}`} id={`btn-modal-${slug}`} href={slug}>
+    <div class="thumb"><img  src={imgsrc} alt={title}  title={title} class="" loading="eager" /></div>
+    <h4 class={`title ${classText}`}>{title}</h4> 
+  </a>
