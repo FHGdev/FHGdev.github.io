@@ -163,7 +163,8 @@ section:first-child {
   opacity: 0.8;
 }
 .nfwidth {
-  width: var(--container-max-width);
+  max-width: var(--container-max-width);
+  width: 100%;
 }
 .fwidth {
   width: 100%;
