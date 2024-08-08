@@ -33,13 +33,7 @@
         "url": "/board-of-director",
         "slug": "board-of-director",
         "status" : "active"
-      },
-      {
-        "name": "Our Milestone",
-        "url": "/our-milestones",
-        "slug": "our-milestones",
-        "status" : "active"
-      }    
+      }
     ]
   },
   {

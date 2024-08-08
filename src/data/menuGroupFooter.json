@@ -27,20 +27,14 @@
       },
       {
         "name": "BOARD OF DIRECTORS",
-        "url": "/board-of-directors",
-        "slug": "board-of-directors",
+        "url": "/board-of-director",
+        "slug": "board-of-director",
         "className" : ""
       },
       {
         "name": "Management team",
         "url": "/management-team",
         "slug": "management-team",
-        "className" : ""
-      },
-      {
-        "name": "Milestone",
-        "url": "/our-milestone",
-        "slug": "our-milestone",
         "className" : ""
       },
       {
