@@ -183,6 +183,34 @@ declare module 'astro:content' {
   render(): Render[".md"];
 }>;
 "teamlist_management": {
+"alain-durand.md": {
+	id: "alain-durand.md";
+  slug: "alain-durand";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"alvin-lim.md": {
+	id: "alvin-lim.md";
+  slug: "alvin-lim";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"derrick-chan.md": {
+	id: "derrick-chan.md";
+  slug: "derrick-chan";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"dr-walter-lim.md": {
+	id: "dr-walter-lim.md";
+  slug: "dr-walter-lim";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
 "ho-kuen-loon.md": {
 	id: "ho-kuen-loon.md";
   slug: "ho-kuen-loon";
@@ -190,9 +218,37 @@ declare module 'astro:content' {
   collection: "teamlist_management";
   data: InferEntrySchema<"teamlist_management">
 } & { render(): Render[".md"] };
+"jeremy-matti.md": {
+	id: "jeremy-matti.md";
+  slug: "jeremy-matti";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
 "kenneth-cheung.md": {
 	id: "kenneth-cheung.md";
   slug: "kenneth-cheung";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"margareta-laminto.md": {
+	id: "margareta-laminto.md";
+  slug: "margareta-laminto";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"ng-shen-li.md": {
+	id: "ng-shen-li.md";
+  slug: "ng-shen-li";
+  body: string;
+  collection: "teamlist_management";
+  data: InferEntrySchema<"teamlist_management">
+} & { render(): Render[".md"] };
+"sean-ho.md": {
+	id: "sean-ho.md";
+  slug: "sean-ho";
   body: string;
   collection: "teamlist_management";
   data: InferEntrySchema<"teamlist_management">

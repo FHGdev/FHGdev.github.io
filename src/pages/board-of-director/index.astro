@@ -4,23 +4,23 @@ import Container from '../../components/Container.astro';
 import { getCollection } from 'astro:content';
 import CustomModal from '../../components/ModalLink.astro';
 
-	const teamlist = (await getCollection('teamlist_management'))
+	const teamlist = (await getCollection('teamlist_bod'))
 	.filter(post => post.data.status == 'active') // Filter out active posts
 	.sort((a, b) => a.data.sort.valueOf() - b.data.sort.valueOf());
 
 ---
 
-<Layout title="Fullerton Health | Management Team" meta_description="Discover the dynamic individuals steering our Fullerton Health Management Team - Meet our exceptional leaders shaping the future of healthcare" body_class="management-team  main">
+<Layout title="Fullerton Health | Board of Director" meta_description="Discover the dynamic individuals steering our Fullerton Health Board of Director - Meet our exceptional leaders shaping the future of healthcare" body_class="management-team  main">
     <section>			
         <Container className="custom-class">
-            <h1 class="notshow fromleft"> <span class="text-gradient">Management Team</span></h1>
+            <h1 class="notshow fromleft"> <span class="text-gradient">Board of Director</span></h1>
             <ul role="list" class="link-card-grid featured">
                 {
                     teamlist.map((post) => (
                         <li class="portfolio-list"  id={post.slug}>
                             <CustomModal 
                                 title={post.data.seo_title} 
-                                slug={`/management-team/${post.slug}/`}                                
+                                slug={`/board-of-director/${post.slug}/`}                                
                                 classText="" 
                                 imgsrc={post.data.heroImage}
                             />

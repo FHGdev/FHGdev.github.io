@@ -5,24 +5,24 @@ import Layout from '../../layouts/group/Layout.astro';
 import Container from '../../components/Container.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('teamlist_management');
+	const posts = await getCollection('teamlist_bod');
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'teamlist_management'>;
+type Props = CollectionEntry<'teamlist_bod'>;
 
 const post = Astro.props;
-
 ---
 
-<Layout title={`${post.data.seo_title} | Management Team | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use  main">
+<Layout title={`${post.data.seo_title} | Board of Director | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use main">
 	<article>
 		<Container className="project-details">
 			<div class="prose">
 				<h1>{post.data.seo_title}</h1>
 			</div>
+			<div class="content"></div>
 		</Container>
 	</article>
 </Layout>
