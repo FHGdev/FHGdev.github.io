@@ -58,6 +58,10 @@ section {
 section:first-child {
   padding: 0;
 }
+section .content__container {
+  max-width: var(--container-max-width);
+  width: 100%;
+}
 .main {
   padding-bottom: 150px;
 }
