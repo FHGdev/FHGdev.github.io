@@ -1,0 +1,28 @@
+---
+const {  className = '', bannerImage, bannerTitle } = Astro.props;
+import { Image } from "astro:assets"
+
+interface Props {
+  className: string;
+  bannerImage: string;
+  bannerTitle: string;
+}
+---
+<section class="banner-section">
+    <Image src={bannerImage}  width={1920} height={800} format='webp' alt={bannerTitle} class:list={`bannerIMG ${className} `} loading="eager"></Image>
+</section>
+
+<style>
+    .banner-section .bannerIMG {
+        width: 100%;
+        object-fit: cover;
+        transition: all 300ms ease-in;
+    }
+    @media (max-width: 1440px) {
+        .banner-section .bannerIMG {
+            height: 100%;
+            object-fit: contain;
+            transition: all 300ms ease-in;
+        }
+    }
+</style>

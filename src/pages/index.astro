@@ -1,21 +1,35 @@
 ---
 import Layout from '../layouts/group/Layout.astro';
+import Banner from '../components/Banner.astro';
+import WhoWeAre from '../components/WhoWeAre.astro';
 
-const { slug = 'home' } = Astro.params;
-let res = await fetch(`https://fullertonhealth.com/wp-json/wp/v2/pages?slug=${slug}`);
-let [post] = await res.json();
-// The getStaticPaths() is required for static Astro sites.
-// If using SSR, you will not need this function.
-export async function getStaticPaths() {
-  let data = await fetch("https://fullertonhealth.com/wp-json/wp/v2/pages")
-  let posts = await data.json();
-  return posts.map((post: { slug: any; }) => ({
-    params: { slug: post.slug },
-    props: { post: post },
-  }));
-}
+// const { slug = 'home' } = Astro.params;
+// let res = await fetch(`https://fullertonhealth.com/wp-json/wp/v2/pages?slug=${slug}`);
+// let [post] = await res.json();
+// // The getStaticPaths() is required for static Astro sites.
+// // If using SSR, you will not need this function.
+// export async function getStaticPaths() {
+//   let data = await fetch("https://fullertonhealth.com/wp-json/wp/v2/pages")
+//   let posts = await data.json();
+//   return posts.map((post: { slug: any; }) => ({
+//     params: { slug: post.slug },
+//     props: { post: post },
+//   }));
+// }
 ---
-<Layout title={`${post.yoast_head_json.title}` } meta_description={`${post.yoast_head_json.description}` } body_class={`wp-page ${post.slug}` }>
-  <div class="main" set:html={post.content.rendered} ></div>
+<Layout title="Fullerton Health | Affordable & Accessible Healthcare in Asia" meta_description="We are the leading integrated healthcare platform to provide affordable and accessible care for all in Asia. Learn more about us." body_class="home">
+  <div class="main">
+  
+    <Banner bannerImage="/images/country_bg-1.jpg" bannerTitle="Fullerton Health | Affordable & Accessible Healthcare in Asia" className=""></Banner>
+    <WhoWeAre></WhoWeAre>
+
+    <Banner bannerImage="/images/sg-background.jpg" bannerTitle="Fullerton Health Singapore | Affordable & Accessible Healthcare in Asia" className=""></Banner>
+
+    <Banner bannerImage="/images/ph-background.jpg" bannerTitle="Fullerton Health Philippines | Affordable & Accessible Healthcare in Asia" className=""></Banner>
+
+    <Banner bannerImage="/images/indonesia-background.jpg" bannerTitle="Fullerton Health Indonesia | Affordable & Accessible Healthcare in Asia" className=""></Banner>
+
+    <Banner bannerImage="/images/othercountries-background.jpg" bannerTitle="Fullerton Health Other Country | Affordable & Accessible Healthcare in Asia" className=""></Banner>
+  </div>
 </Layout>
 
