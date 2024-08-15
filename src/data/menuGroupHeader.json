@@ -43,20 +43,20 @@
     "submenu": [
       {
         "name": "News & Events",
-        "url": "/category/fh-news-events",
-        "slug": "fh-news-events",
+        "url": "/category/news-events",
+        "slug": "news-events",
         "status" : "active"
       },
       {
         "name": "Press Releases",
-        "url": "/category/fh-press-releases",
-        "slug": "fh-press-releases",
+        "url": "/category/press-releases",
+        "slug": "press-releases",
         "status" : "active"
       },
       {
         "name": "Resources",
-        "url": "/category/fh-resources",
-        "slug": "fh-resources",
+        "url": "/category/resources",
+        "slug": "resources",
         "status" : "active"
       },
       {
