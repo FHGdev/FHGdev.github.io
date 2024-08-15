@@ -32,14 +32,14 @@ import Container from '../components/Container.astro';
       </Container>      
     </section>
 
-    <section id="healthcare-partner" style="background: url('/images/Your-Comprehensive-Healthcare-Partner-bg.png');">
-      <Container className="about text-center pd-top-10 pd-bottom-10 pd-left-10 pd-right-10">
+    <section id="healthcare-partner" style="background: url('/images/Your-Comprehensive-Healthcare-Partner-bg.png');" class="has-bg">
+      <Container className="about text-center pd-top-10 pd-left-10 pd-right-10">
           <div class="link-card-grid grid-2">
-            <div>
+            <div class="item-grid-1">
               <img src="/images/One-Family-Doctor-and-One-Health-Plan-for-Everyone-4.png" alt="TeYour Comprehensive Healthcare Partner
 " loading="eager">
             </div>
-            <div>
+            <div class="item-grid-2">
                 <h2>Your Comprehensive Healthcare Partner</h2>
                 <p>Discover a comprehensive range of healthcare services at Fullerton Health. Whether you’re an individual, a corporate client, or an insurer, we offer diagnostic, specialty, chronic, and ancillary care to cater to your unique needs. We also provide comprehensive care programs for managing chronic conditions, focusing on disease management, prevention, and ongoing support.</p>
             </div>
@@ -60,5 +60,14 @@ import Container from '../components/Container.astro';
 <style>
   #about video {
     width: 100%;
+  }
+  #healthcare-partner {
+    padding: 40px 0 0 0;
+  }
+  #healthcare-partner img {
+    max-height: fit-content;
+  }
+  #healthcare-partner .link-card-grid.grid-2 {
+    grid-template-columns: 40% 60%;
   }
 </style>
