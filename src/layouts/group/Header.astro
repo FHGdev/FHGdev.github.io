@@ -71,24 +71,27 @@ const { slug } = Astro.params;
 </script>
 <header id="navHeader" class="header--right white-bg">
   <Container className="container-header">
-  <div class="header-logo-menu__container">
-    <a class="header-logo__link" href="/">
+    <div class="header-logo-menu__container">
+      <a class="header-logo__link" href="/">
+        <slot name="logo">
+        </slot>
+      </a>
+      <button id="menuButton" title="Open Main Menu">
+        <span id="menuButtonIconHam">
+            <div class="baseline-menu"></div>
+          <Icon name="ic:baseline-menu" width="24px" height="24px" />
+        </span>
+        <span id="menuButtonIconClose" hidden>
+          <Icon name="ic:baseline-close" width="24px" height="24px" />
+          <div class="baseline-close"></div>
+        </span>
+      </button>    
+    </div>
+  <div class="header-nav__container">
+    <a class="header-logo__link mobile" href="/">
       <slot name="logo">
       </slot>
     </a>
-    <button id="menuButton" title="Open Main Menu">
-      <span id="menuButtonIconHam">
-          <div class="baseline-menu"></div>
-        <Icon name="ic:baseline-menu" width="24px" height="24px" />
-      </span>
-      <span id="menuButtonIconClose" hidden>
-        <Icon name="ic:baseline-close" width="24px" height="24px" />
-        <div class="baseline-close"></div>
-      </span>
-    </button>
-    
-  </div>
-  <div class="header-nav__container">
     <slot name="nav">
       <nav>
         <ul>

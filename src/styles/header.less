@@ -135,7 +135,13 @@ header {
 body {
     left: 0;
     transition: all 0.3s ease-in-out;
-}  
+}
+.header-nav__container {
+  .header-logo__link {
+    display: none !important;
+  }
+}
+
 @media(max-width: 991px) {
   body[mobile-menu-open] {
     left: -350px;
@@ -219,12 +225,25 @@ body {
           }
         }
       }
+      .header-logo__link {
+        display: block !important;
+        border-bottom: 1px solid #ccc;
+        p.logo {
+          width: 100%;
+          padding: 10px 10px;
+            img {
+              text-align: center;
+              margin: 0 auto;
+              width: 100%;
+              object-fit: none;
+            }
+        }
+      }
     } 
     &[mobile-menu-open] .header-nav__container {
       right: 0!important;
       box-shadow: 0 5px 5px #ccc;      
     }
   }
-  
 
 }
