@@ -14,15 +14,32 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'teamlist_bod'>;
 
 const post = Astro.props;
----
+const { Content } = await post.render();
 
-<Layout title={`${post.data.seo_title} | Board of Director | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use main">
-	<article>
-		<Container className="project-details nfwidth">
-			<div class="prose">
-				<h1>{post.data.seo_title}</h1>
-			</div>
-			<div class="content"></div>
-		</Container>
-	</article>
+const teamlist = (await getCollection('teamlist_bod'))
+	.filter(post => post.data.status == 'active') // Filter out active posts
+	.sort((a, b) => a.data.sort.valueOf() - b.data.sort.valueOf());
+---
+<Layout title={`${post.data.seo_title} | Board of Director | Fullerton Health` } meta_description={`${post.data.seo_description}` } body_class="project inner index something you wish to add for any use  main ">
+	<div class="main">
+        <section>	
+			<Container className="project-details nfwidth">
+				<div class="prose">
+					<h1>{post.data.seo_title}</h1>
+					<p><Content /></p>
+				</div>
+				<div>
+					<ul role="list" class="">
+						{
+							teamlist.map((post) => (
+								<li class="portfolio-list notshow fromtop"  id={post.slug}>
+									<a href={`/board-of-director/${post.slug}/`}>{post.data.seo_title}</a>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</Container>
+		</section>
+	</div>
 </Layout>
