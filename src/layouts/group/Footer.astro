@@ -59,12 +59,12 @@ import award6 from './footerIMG/voty2021_badge_silver_winner_compressed-300x185.
         <ul class="link-card-grid">
             {menuData.map(menu => (
             <li class={`${menu.className}`} >
-                <a href={`${menu.url}`} class={`${menu.className}`}>{menu.name}</a>
+                <a href={`${menu.url}`} class={`${menu.className}`} target="_blank">{menu.name}</a>
                 {menu.submenu && (
                 <ul class="sub-menu">
                     {menu.submenu.map(submenuItem => (
                         <li>
-                            <a href={`${submenuItem.url}`}>{submenuItem.name}</a>                        
+                            <a href={`${submenuItem.url}`} class={`${menu.className}`}  target="_blank">{submenuItem.name}</a>                        
                         </li>                    
                     ))}
                 </ul>

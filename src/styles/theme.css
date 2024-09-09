@@ -25,9 +25,10 @@
   --container-padding: 60px 1rem;
   --theme-blog-post-header-width: 1200px;
   /* Theme Fonts */
-  --theme-font-family-effra: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
+  --theme-font-family-effra: "Effra", Helvetica, Sans-serif;
+  --theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
 		Times, serif;
-  --theme-font-family-effra: 'Lato', -apple-system, BlinkMacSystemFont,
+  --theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
 		sans-serif;
 }
 [data-theme='default'] {
