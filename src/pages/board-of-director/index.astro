@@ -10,24 +10,26 @@ import CustomModal from '../../components/ModalLink.astro';
 
 ---
 
-<Layout title="Fullerton Health | Board of Director" meta_description="Discover the dynamic individuals steering our Fullerton Health Board of Director - Meet our exceptional leaders shaping the future of healthcare" body_class="management-team  main">
-    <section>			
-        <Container className="nfwidth">
-            <h1 class="notshow fromleft"> <span class="text-gradient">Board of Director</span></h1>
-            <ul role="list" class="link-card-grid featured">
-                {
-                    teamlist.map((post) => (
-                        <li class="portfolio-list"  id={post.slug}>
-                            <CustomModal 
-                                title={post.data.seo_title} 
-                                slug={`/board-of-director/${post.slug}/`}                                
-                                classText="" 
-                                imgsrc={post.data.heroImage}
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
-        </Container>	
-    </section>	    
-  </Layout>
+<Layout title="Fullerton Health | Board of Director" meta_description="Discover the dynamic individuals steering our Fullerton Health Board of Director - Meet our exceptional leaders shaping the future of healthcare" body_class="management-team">
+    <div class="main">
+        <section>			
+            <Container className="nfwidth">
+                <h1 class="notshow fromleft text-center"> <span class="text-gradient">Board of Director</span></h1>
+                <ul role="list" class="link-card-grid featured">
+                    {
+                        teamlist.map((post) => (
+                            <li class="portfolio-list"  id={post.slug}>
+                                <CustomModal 
+                                    title={post.data.seo_title} 
+                                    slug={`/board-of-director/${post.slug}/`}                                
+                                    classText="" 
+                                    imgsrc={post.data.heroImage}
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </Container>	
+        </section>
+    </div>    
+</Layout>
