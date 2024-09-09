@@ -1,5 +1,5 @@
 ---
-sort: 1
+sort: 8
 pubDate: 'Oct 15 2023'
 updatedDate: 'Oct 15 2023'
 heroImage: '/teamlist/ho-kuen-loon-bod.png'
@@ -12,8 +12,8 @@ image: {
 }
 status: 'active'
 date: 2023-10-15
-position: Group Chief Executive Officer, Executive Director
-teamname: Management Team
+position: Executive Director
+teamname: Board of Director
 ---
 
 Mr Ho Kuen Loon is the Group CEO of Fullerton Health Corporation (FHC), a position he has held since 1 January 2020. He also serves as an Executive Director on the Board of FHC. Prior to his appointment as Group CEO, he served as Group COO from 2018 to 2019 and as MD for Singapore from 2019 to 2022. Previously, he held roles as Regional MD for Australia & Indonesia from 2016 to 2018 and as Group CFO from 2013 to 2015.

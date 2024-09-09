@@ -157,9 +157,58 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "teamlist_bod": {
+"alex-yeung.md": {
+	id: "alex-yeung.md";
+  slug: "alex-yeung";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"charles-ong.md": {
+	id: "charles-ong.md";
+  slug: "charles-ong";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"dr-teh-kok-peng.md": {
+	id: "dr-teh-kok-peng.md";
+  slug: "dr-teh-kok-peng";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
 "ho-kuen-loon.md": {
 	id: "ho-kuen-loon.md";
   slug: "ho-kuen-loon";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"john-batchelor.md": {
+	id: "john-batchelor.md";
+  slug: "john-batchelor";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"richard-ong.md": {
+	id: "richard-ong.md";
+  slug: "richard-ong";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"vivian-lam.md": {
+	id: "vivian-lam.md";
+  slug: "vivian-lam";
+  body: string;
+  collection: "teamlist_bod";
+  data: InferEntrySchema<"teamlist_bod">
+} & { render(): Render[".md"] };
+"wang-lin.md": {
+	id: "wang-lin.md";
+  slug: "wang-lin";
   body: string;
   collection: "teamlist_bod";
   data: InferEntrySchema<"teamlist_bod">

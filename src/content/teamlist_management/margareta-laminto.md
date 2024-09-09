@@ -12,7 +12,10 @@ image: {
 }
 status: 'active'
 date: 2023-10-15
-position: Group Chief Commercial Officer, Group Chief Sustainability Officer, Managing Director, RadLink, Managing Director, Specialist Division
+position: "Group Chief Commercial Officer, 
+Group Chief Sustainability Officer, 
+Managing Director, RadLink, 
+Managing Director, Specialist Division"
 teamname: Management Team
 ---
 

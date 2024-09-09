@@ -12,8 +12,9 @@ image: {
 }
 status: 'active'
 date: 2023-10-15
-position: "Managing Director, Malaysia, Vietnam & Cambodia,
-Managing Director, Enterprise Digital Solutions"
+position: "Managing Director, Malaysia, Vietnam & Cambodia
+Managing Director, Enterprise Digital Solutions
+Managing Director, Fullerton Health Tech"
 teamname: Management Team
 ---
 

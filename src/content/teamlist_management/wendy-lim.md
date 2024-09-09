@@ -12,7 +12,8 @@ image: {
 }
 status: 'active'
 date: 2023-10-15
-position: Group Chief Operating Officer, Group Chief People Officer
+position: "Group Chief Operating Officer, 
+Group Chief People Officer"
 teamname: Management Team
 ---
 

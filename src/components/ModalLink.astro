@@ -1,14 +1,53 @@
 ---
 const { 
   title = 'Welcome, world!', 
-  slug, 
+  slug,
+  pos = '',
   classContainer = '', 
   classText = '', 
   imgsrc = '',
 } = Astro.props;
 ---
 
-<a class={`btn-modal ${classContainer}`} id={`btn-modal-${slug}`} href={slug}>
+<a class={`btn-modal text-center ${classContainer}`} id={`btn-modal-${slug}`} href={slug}>
   <div class="thumb"><img  src={imgsrc} alt={title}  title={title} class="" loading="eager" /></div>
-  <h4 class={`title ${classText}`}>{title}</h4> 
+  <h4 class={`title ${classText}`}>{title}</h4>
+  <span class="position text-center">{pos}</span> 
 </a>
+
+<style>
+  .btn-modal {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+  }
+  .btn-modal .title {
+    color: var(--theme-color-1);
+    font-size: var(--font-size-md);
+  }
+  .btn-modal .position {
+    color: var(--theme-color-2);
+    font-size: var(--font-size-base);
+  }
+  .btn-modal img {
+    aspect-ratio: 4 / 4 !important;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: solid 3px #004991;
+  }
+</style>

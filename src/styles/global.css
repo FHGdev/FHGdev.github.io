@@ -332,6 +332,9 @@ nav.pagination-blog a:hover svg {
 section {
   overflow: hidden;
 }
+section.spacer {
+  margin: 50px 0;
+}
 .boxes {
   padding: 10px 10px;
   margin-bottom: 20px;
