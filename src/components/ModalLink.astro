@@ -12,7 +12,7 @@ const {
 <a class={`btn-modal text-center ${classContainer}`} id={`btn-modal-${slug}`} href={slug}>
   <div class="thumb"><img  src={imgsrc} alt={title}  title={title} class="" loading="eager" /></div>
   <h4 class={`title ${classText}`}>{title}</h4>
-  <span class="position text-center">{pos}</span> 
+  <p class="position text-center" set:html={pos}></p> 
 </a>
 
 <style>

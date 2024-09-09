@@ -10,7 +10,7 @@ image: {
   src: "/teamlist/dr-walter-lim-mt.png",
   alt: "Dr. Walter Lim",
 }
-status: 'active'
+status: 'inactive'
 date: 2023-10-15
 position: Managing Director, Singapore
 teamname: Management Team

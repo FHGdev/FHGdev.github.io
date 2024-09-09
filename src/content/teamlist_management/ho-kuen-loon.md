@@ -12,7 +12,7 @@ image: {
 }
 status: 'active'
 date: 2023-10-15
-position: Group Chief Executive Officer, Executive Director
+position: "Group Chief Executive Officer, <br> Executive Director"
 teamname: Management Team
 ---
 
