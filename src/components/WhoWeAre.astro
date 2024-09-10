@@ -6,22 +6,22 @@ import { Image } from "astro:assets"
         <h2 class="text-center">Who We Are</h2>
         <ul role="list" class="link-card-grid">
             <li class="notshow fromtop text-center">
-                <Image src="/images/markets.png"  width={100} height={100} format='webp' alt="markets" class:list="whoweare" loading="eager"></Image>
+                <Image src="/images/markets.png"  width={120} height={120} format='webp' alt="markets" class:list="whoweare" loading="eager"></Image>
                 <h3>9</h3>
                 <p>MARKETS ACROSS ASIA PACIFIC</p>
             </li>
             <li class="notshow fromtop text-center">
-                <Image src="/images/facilities.png"  width={100} height={100} format='webp' alt="facilities" class:list="whoweare" loading="eager"></Image>
+                <Image src="/images/facilities.png"  width={120} height={120} format='webp' alt="facilities" class:list="whoweare" loading="eager"></Image>
                 <h3>550+</h3>
                 <p>OWNED FACILITIES</p>
             </li>
             <li class="notshow fromtop text-center">
-                <Image src="/images/lives.png"  width={100} height={100} format='webp' alt="lives" class:list="whoweare" loading="eager"></Image>
+                <Image src="/images/lives.png"  width={120} height={120} format='webp' alt="lives" class:list="whoweare" loading="eager"></Image>
                 <h3>13M</h3>
                 <p>HEALTHCARE TRANSACTIONS</p>
             </li>
             <li class="notshow fromtop text-center">
-                <Image src="/images/network.png"  width={100} height={100} format='webp' alt="network" class:list="whoweare" loading="eager"></Image>
+                <Image src="/images/network.png"  width={120} height={120} format='webp' alt="network" class:list="whoweare" loading="eager"></Image>
                 <h3>12K</h3>
                 <p>NETWORK PROVIDERS</p>
             </li>
@@ -30,13 +30,19 @@ import { Image } from "astro:assets"
 </section>
 
 <style>
+    .who-we-are-section {
+        padding: 60px 0;
+    }
     .who-we-are-section .container {
-        padding: 10px;
+        padding: 20px 10px;
         margin: 0 auto 10px;
-        max-width: var(--container-max-width-narrow);
+        max-width: var(--theme-blog-post-header-width);
         width: 100%;
         box-shadow: 10px 20px 46px 12px rgba(207, 207, 207, 0.3);
         border-radius: 10px 10px 10px 10px;
+    }
+    .who-we-are-section li img {
+        margin: 0 auto;
     }
     .who-we-are-section .link-card-grid {
         display: grid;
